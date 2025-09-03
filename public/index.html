@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - AI-Powered Project Management SaaS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importing Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="white" fill-opacity="0.1"%3E%3Ccircle cx="50" cy="50" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .testimony {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <i class="fas fa-rocket text-yellow-400"></i> TaskFlow
+            </div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
+                <li><a href="#features" class="hover:text-yellow-400 transition">Features</a></li>
+                <li><a href="#pricing" class="hover:text-yellow-400 transition">Pricing</a></li>
+                <li><a href="#about" class="hover:text-yellow-400 transition">About</a></li>
+                <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+            </ul>
+            <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-500 transition hidden md:block" onclick="scrollToSection('pricing')">Get Started</button>
+            <button class="md:hidden" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-10 px-4 py-2">
+            <a href="#home" class="block py-2">Home</a>
+            <a href="#features" class="block py-2">Features</a>
+            <a href="#pricing" class="block py-2">Pricing</a>
+            <a href="#about" class="block py-2">About</a>
+            <a href="#contact" class="block py-2">Contact</a>
+            <button class="bg-yellow-400 text-black px-4 py-1 rounded-full mt-2" onclick="scrollToSection('pricing')">Get Started</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg py-20 px-4 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto animate-fadeIn">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Revolutionize Your Projects with <span class="text-yellow-400">TaskFlow AI</span>
+            </h1>
+            <p class="text-xl mb-8 text-blue-100">
+                Boost productivity by 300% with our intelligent task management platform that learns from your workflow and automates the mundane.
+            </p>
+            <div class="flex justify-center space-x-4 mb-12">
+                <button class="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-500 transition transform hover:scale-105" onclick="scrollToSection('pricing')">Start Free Trial</button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition" onclick="scrollToSection('features')">Learn More</button>
+            </div>
+            <div class="relative">
+                <img src="https://placehold.co/1200x600" alt="Dynamic dashboard interface of TaskFlow AI showing colorful graphs for project progress, team collaboration icons, AI recommendations, and real-time notifications on a sleek, futuristic monitor in a modern office setting with subtle neon accents and minimalist design" class="rounded-lg shadow-2xl mx-auto" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 bg-white text-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
+                Unleash the Power of Intelligent Productivity
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="feature-card bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl shadow-lg text-center animate-fadeIn">
+                    <i class="fas fa-brain text-5xl text-yellow-500 mb-6"></i>
+                    <img src="https://placehold.co/400x300" alt="Artificial intelligence neural network visualization with glowing nodes and connections representing predictive analytics for project tasks" class="w-full rounded-lg mb-4" />
+                    <h3 class="text-2xl font-bold mb-4">AI Task Prediction</h3>
+                    <p>Our advanced AI analyzes your past projects to predict deadlines, assign resources, and suggest optimizations in real-time.</p>
+                </div>
+                <div class="feature-card bg-gradient-to-br from-green-50 to-teal-100 p-8 rounded-xl shadow-lg text-center animate-fadeIn" style="animation-delay: 0.2s;">
+                    <i class="fas fa-users text-5xl text-yellow-500 mb-6"></i>
+                    <img src="https://placehold.co/400x300" alt="Collaborative workspace with virtual avatars of team members around a circular table sharing ideas via holographic projections" class="w-full rounded-lg mb-4" />
+                    <h3 class="text-2xl font-bold mb-4">Seamless Collaboration</h3>
+                    <p>Integrate with popular tools, chat in real-time, and share files effortlessly across distributed teams.</p>
+                </div>
+                <div class="feature-card bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-xl shadow-lg text-center animate-fadeIn" style="animation-delay: 0.4s;">
+                    <i class="fas fa-chart-line text-5xl text-yellow-500 mb-6"></i>
+                    <img src="https://placehold.co/400x300" alt="Vivid progress bar graph rising upward with milestone markers and motivational icons in a clean, tech-inspired environment" class="w-full rounded-lg mb-4" />
+                    <h3 class="text-2xl font-bold mb-4">Real-Time Analytics</h3>
+                    <p>Gain deep insights with customizable dashboards that update live, helping you make data-driven decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4 bg-gray-100 text-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">What Our Users Say</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="testimony animate-fadeIn">
+                    <img src="https://placehold.co/100x100" alt="Professional portrait of a smiling female project manager in business attire with a laptop in a corporate office background" class="w-16 h-16 rounded-full mb-4" />
+                    <p class="text-lg italic mb-4">"TaskFlow transformed our team's efficiency overnight. The AI suggestions are spot-on!"</p>
+                    <p class="font-semibold">- Sophia Chen, Lead Developer at TechNova</p>
+                </div>
+                <div class="testimony animate-fadeIn" style="animation-delay: 0.2s;">
+                    <img src="https://placehold.co/100x100" alt="Confident male entrepreneur in casual attire holding a tablet with charts displaying growth trends in a startup loft" class="w-16 h-16 rounded-full mb-4" />
+                    <p class="text-lg italic mb-4">"We've cut project times in half. The real-time features are incredible."</p>
+                    <p class="font-semibold">- Alex Rodriguez, CEO at InnovateLabs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 bg-gradient-to-br from-indigo-900 to-purple-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Choose Your Perfect Plan</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-8 rounded-xl text-center feature-card">
+                    <h3 class="text-2xl font-bold mb-4">Starter</h3>
+                    <p class="text-4xl font-bold mb-2">$9<span class="text-lg">/mo</span></p>
+                    <ul class="mb-8 text-left">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Up to 5 projects</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Basic AI insights</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Email support</li>
+                    </ul>
+                    <button class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold w-full">Get Started</button>
+                </div>
+                <div class="bg-yellow-400 text-black p-8 rounded-xl text-center feature-card transform scale-105">
+                    <h3 class="text-2xl font-bold mb-4">Pro</h3>
+                    <p class="text-5xl font-bold mb-2">$29<span class="text-xl">/mo</span></p>
+                    <ul class="mb-8 text-left">
+                        <li><i class="fas fa-check mr-2"></i>Unlimited projects</li>
+                        <li><i class="fas fa-check mr-2"></i>Advanced AI analytics</li>
+                        <li><i class="fas fa-check mr-2"></i>24/7 priority support</li>
+                        <li><i class="fas fa-check mr-2"></i>API access</li>
+                    </ul>
+                    <button class="bg-black text-yellow-400 px-6 py-3 rounded-full font-semibold w-full">Get Pro Now</button>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-8 rounded-xl text-center feature-card">
+                    <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                    <p class="text-4xl font-bold mb-2">$99<span class="text-lg">/mo</span></p>
+                    <ul class="mb-8 text-left">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>All Pro features</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Custom integrations</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Dedicated consultant</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>SLA guarantee</li>
+                    </ul>
+                    <button class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold w-full">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 bg-gray-900 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-xl mb-4">TaskFlow</h4>
+                    <p>Empowering teams with AI-driven productivity solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <a href="#" class="block hover:text-yellow-400">Features</a>
+                    <a href="#" class="block hover:text-yellow-400">Pricing</a>
+                    <a href="#" class="block hover:text-yellow-400">Integrations</a>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <a href="#" class="block hover:text-yellow-400">About</a>
+                    <a href="#" class="block hover:text-yellow-400">Blog</a>
+                    <a href="#" class="block hover:text-yellow-400">Careers</a>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <a href="#" class="block hover:text-yellow-400">Help Center</a>
+                    <a href="#" class="block hover:text-yellow-400">API Docs</a>
+                    <a href="#" class="block hover:text-yellow-400">Status</a>
+                </div>
+            </div>
+            <p>&copy; 2023 TaskFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scroll to sections
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Animate elements on scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.animate-fadeIn');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (position < windowHeight - 100) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
